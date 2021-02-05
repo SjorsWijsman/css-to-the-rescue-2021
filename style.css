@@ -1,0 +1,36 @@
+.test {
+  display: inline-block;
+  offset-path: path("M1528,74 C1528,74 1373,133.857147 1268.50505,133.857143 C1164.0101,133.857138 1044.60849,63.2746747 942.414141,45.2857143 C840.219794,27.2967539 749.351683,18.0222476 595.72201,85.3965342 C442.092336,152.770821 424.504306,178.600216 316.186064,168.137541 C294.677978,156.981816 226.287635,133.857145 219.453224,52.0727741 C212.618812,-29.7115971 316.186058,-10.3505382 284.713623,99.4034497 C253.241188,209.157438 1.06334642,60.6018191 1.06334642,60.6018191");
+  animation: move 3s linear infinite reverse;
+}
+
+.test2 > * {
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  offset-path: path("M1528,74 C1528,74 1373,133.857147 1268.50505,133.857143 C1164.0101,133.857138 1044.60849,63.2746747 942.414141,45.2857143 C840.219794,27.2967539 749.351683,18.0222476 595.72201,85.3965342 C442.092336,152.770821 424.504306,178.600216 316.186064,168.137541 C294.677978,156.981816 226.287635,133.857145 219.453224,52.0727741 C212.618812,-29.7115971 316.186058,-10.3505382 284.713623,99.4034497 C253.241188,209.157438 1.06334642,60.6018191 1.06334642,60.6018191");
+  offset-rotate: 0deg;
+  animation: move 10s linear infinite reverse;
+  animation-delay: calc(var(--child-count, 0) * 100ms * -1);
+  background-color: rgb(calc(8 / var(--child-count, 0) * 255),0,0);
+}
+
+body :nth-child(1) { --child-count: 1 }
+body :nth-child(2) { --child-count: 2 }
+body :nth-child(3) { --child-count: 3 }
+body :nth-child(4) { --child-count: 4 }
+body :nth-child(5) { --child-count: 5 }
+body :nth-child(6) { --child-count: 6 }
+body :nth-child(7) { --child-count: 7 }
+body :nth-child(8) { --child-count: 8 }
+body :nth-child(9) { --child-count: 9 }
+body :nth-child(10) { --child-count: 10 }
+
+@keyframes move {
+  100% {
+    offset-distance: 100%;
+  }
+}
