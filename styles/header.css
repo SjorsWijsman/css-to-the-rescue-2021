@@ -1,0 +1,62 @@
+header {
+}
+
+header h2 {
+
+}
+
+header ul {
+  font-family: 'Crimson Text', serif;
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  list-style: none;
+  max-width: 40rem;
+
+}
+
+header ul * {
+  font-size: 0.9rem;
+}
+
+header ul li {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1em;
+  color: var(--color-white-dark);
+  transition: all .5s;
+}
+
+header ul li:hover {
+  transform: scale(1.1);
+}
+
+header ul li span {
+  transition: all .5s;
+  color: var(--color-effect);
+  opacity: 0.3;
+  filter: blur(0.02em);
+  transform: translateY(100%) scale(2);
+}
+
+header ul li span:hover {
+  color: var(--color-effect);
+  opacity: 1;
+  filter: blur(0.01em);
+}
+
+header p:nth-child(-n+3) {
+  color: var(--color-effect);
+}
+
+header p:nth-last-child(-n+6) {
+  color: white;
+  opacity: 0.5;
+}

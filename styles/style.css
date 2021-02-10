@@ -1,0 +1,39 @@
+html {
+  --color-black: #070b12;
+  --color-white: #f0f1f5;
+  --color-white-dark: #d5d8e3;
+  --color-effect: cyan;
+  --color-background: #0c182b;
+  --background-gradient: linear-gradient(var(--color-background), var(--color-black));
+  font-size: calc(60% + 0.8vmin);
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  min-height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+:root {
+  background: var(--background-gradient);
+  background-color: var(--color-background);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
+  color: var(--color-white);
+  cursor: default;
+}
+
+body {
+  height: 100vh;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
