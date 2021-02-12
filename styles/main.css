@@ -1,0 +1,11 @@
+svg {
+  position: fixed;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+main * {
+  color: var(--color-effect);
+  text-transform: uppercase;
+}

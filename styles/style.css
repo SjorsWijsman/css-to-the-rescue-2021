@@ -13,6 +13,34 @@ html {
   overflow: hidden;
 }
 
+/* html {
+  animation-name: flip;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes flip {
+  0% {
+    transform: scaleY(1);
+    filter: none;
+  }
+
+  95% {
+    transform: scaleY(1);
+    filter: none;
+  }
+
+  95.1% {
+    transform: scaleY(-1);
+    filter: contrast(150%);
+  }
+
+  100% {
+    transform: scaleY(-1);
+    filter: contrast(150%);
+  }
+} */
+
 :root {
   background: var(--background-gradient);
   background-color: var(--color-background);
@@ -23,12 +51,14 @@ html {
   margin: 0;
   box-sizing: border-box;
   font-size: 1rem;
-  color: var(--color-white);
   cursor: default;
+  transition: all .5s;
 }
 
 body {
   height: 100vh;
+  width: 100%;
+  font-family: 'Cinzel', serif;
 }
 
 main {
