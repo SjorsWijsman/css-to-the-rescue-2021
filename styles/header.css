@@ -1,6 +1,6 @@
 header {
   z-index: 10;
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 1rem;
   transform: translateX(-50%);
@@ -54,6 +54,7 @@ header ul li:hover {
 header ul li span {
   pointer-events: none;
   color: var(--color-effect);
+  text-shadow: 0 0 0.5rem var(--color-effect);
   opacity: 0;
   filter: blur(0.6em);
   width: auto;

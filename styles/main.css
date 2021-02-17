@@ -3,9 +3,68 @@ svg {
   height: 100%;
   left: 50%;
   transform: translateX(-50%);
+  pointer-events: none;
+  opacity: 0.95;
+  z-index: 5;
+}
+
+main {
+  max-width: 27rem;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+  padding-top: 100%;
+  padding-bottom: 50rem;
 }
 
 main * {
   color: var(--color-effect);
   text-transform: uppercase;
+}
+
+main article {
+  padding-bottom: 10rem;
+  min-height: 100vh;
+}
+
+main article * {
+  font-size: 0.8rem;
+  text-shadow: 0 0 0.5rem var(--color-effect);
+  text-align: justify;
+}
+
+main article h2 {
+  font-size: 2em;
+  text-align: center;
+}
+
+main article:nth-child(1) {
+  opacity: calc(1 / 7);
+}
+
+main article:nth-child(2) {
+  opacity: calc(2 / 7);
+}
+
+main article:nth-child(3) {
+  opacity: calc(0.3 + 0.7 * calc(3 / 7));
+}
+
+main article:nth-child(4) {
+  opacity: calc(0.3 + 0.7 * calc(4 / 7));
+}
+
+main article:nth-child(5) {
+  opacity: calc(0.3 + 0.7 * calc(5 / 7));
+}
+
+main article:nth-child(6) {
+  opacity: calc(0.3 + 0.7 * calc(6 / 7));
+}
+
+main article:nth-child(7) {
+  opacity: calc(0.3 + 0.7 * calc(7 / 7));
 }
