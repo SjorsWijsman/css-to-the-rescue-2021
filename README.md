@@ -10,7 +10,7 @@ The first week I spent quite some time figuring out what I wanted to do for this
 
 My first experiments were moving text along a set path. The results of those experiments looked like this:
 
-![first experiment](https://s4.gifyu.com/images/first-experiment.gif)
+https://streamable.com/pm5kw9
 
 [Commit](https://github.com/SjorsWijsman/css-to-the-rescue-2021/commit/1ddc337217dd9ebf3bfee13349c618e5dd68ce3b)
 
@@ -21,20 +21,20 @@ My next goal was to recreate a movie poster or album cover using mostly text and
 
 After some playing around I got a decent layout of the poster in HTML:
 
-![decent layout](https://s4.gifyu.com/images/decent-layout.gif)
+https://streamable.com/og6lg2
 
 [Commit](https://github.com/SjorsWijsman/css-to-the-rescue-2021/commit/55ef12eedadf7850add165ac1b405499639aebe5)
 
 Eventually I added Frank's (the bunny) face to the layout as an overlay with the text incorperated inside his face:
 
-![frank overlay](https://s4.gifyu.com/images/frank-overlay.gif)
+https://streamable.com/rchii9
 
 [Commit](https://github.com/SjorsWijsman/css-to-the-rescue-2021/commit/bae809557592884bf2b38b2ec8654b372296ab00)
 
 ### Week 3
 The third week was spent trying to fit the text inside of Frank's face. This proved to be more difficult than I initially hoped, as placing text around an object is a lot easier to do, for example with `shape-outside`. Sadly there's no way to easily fit text inside of a shape (`shape-inside` might be [coming soon](https://www.w3.org/TR/css-shapes/#intro) however), there are some workarounds, but most of them boil down to inverting the shape and using `shape-outside`. Which I didn't want to use, as it'd make creating the bunny's smaller details harder and give me less creative freedom. I instead decided to keep it how it was and work on making the text inside the bunny more interactive, the first step was to make it scrollable:
 
-![scrollable text](https://s4.gifyu.com/images/scrollable-text.md.gif)
+https://streamable.com/n3gptc
 
 [Commit](https://github.com/SjorsWijsman/css-to-the-rescue-2021/commit/cbdda5521589bc44fe742c56699cd181daad36be)
 
@@ -53,6 +53,6 @@ opacity: calc(1 / var(--cicada) + 0.7);
 
 The result of this and end result of the project looks like the following (also viewable [here live](https://sjorswijsman.github.io/css-to-the-rescue-2021/)):
 
-![result](https://s4.gifyu.com/images/resultef120156f7870c45.gif)
+https://streamable.com/gpbbnd
 
 [Commit](https://github.com/SjorsWijsman/css-to-the-rescue-2021/commit/887421fd60b0496934114d1cf1d1807a3717e1ff)
