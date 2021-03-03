@@ -1,11 +1,35 @@
-svg {
+svg, img {
   position: fixed;
   height: 100%;
   left: 50%;
   transform: translateX(-50%);
   pointer-events: none;
-  opacity: 0.95;
   z-index: 5;
+}
+
+img {
+  z-index: 4;
+  opacity: 1;
+  animation-name: animate-opacity;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes animate-opacity {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) scale(3);
+  }
+  70% {
+    opacity: 0;
+    transform: translateX(-50%) scale(3);
+  }
+  80%
+  {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
 }
 
 main {
@@ -15,56 +39,104 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: scroll;
   padding-top: 100%;
-  padding-bottom: 50rem;
+  padding-bottom: 5rem;
+  perspective: 100rem;
 }
 
-main * {
+main > * {
+  position: sticky;
+  display: inline-block;
   color: var(--color-effect);
   text-transform: uppercase;
-}
-
-main article {
-  padding-bottom: 10rem;
-  min-height: 100vh;
-}
-
-main article * {
-  font-size: 0.8rem;
+  line-height: 1em;
   text-shadow: 0 0 0.5rem var(--color-effect);
   text-align: justify;
+  animation-name: animate-glow;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  padding-bottom: 5rem;
+  z-index: 1;
 }
 
-main article h2 {
-  font-size: 2em;
+/* Children offset */
+main > * {
+  --base-opacity: 0.5;
+  --children-count: 45;
+  top: calc(75% / var(--children-count) * var(--child-number));
+  transform: translateY(-40%);
+  opacity: calc(var(--base-opacity) + calc(1 - var(--base-opacity)) * calc(var(--child-number) / var(--children-count)));
+}
+
+/* Cicada randomness */
+main > * {
+  --cicada-2: 0;
+  --cicada-3: 0;
+  --cicada-5: 0;
+  --cicada-7: 0;
+  --cicada-11: 0;
+  --cicada-13: 0;
+  --cicada-17: 0;
+  --cicada-19: 0;
+
+  --cicada-max: 8;
+  --cicada: calc(var(--cicada-2) + var(--cicada-3) + var(--cicada-5) + var(--cicada-7) + var(--cicada-11) + var(--cicada-13) + var(--cicada-17) + var(--cicada-19));
+
+  transform:
+    rotate(calc(calc(var(--cicada) - 2) * 5deg))
+    skewX(calc(calc(var(--cicada) - 2) * 5deg))
+    translateZ(calc(var(--cicada) * 1rem));
+  font-size: calc(var(--cicada) * 0.2rem + 0.6rem);
+}
+
+@keyframes animate-glow {
+  80% {
+    text-shadow: 0 0 0.5rem var(--color-effect);
+  }
+  100% {
+    text-shadow: 0 0 1rem var(--color-white);
+  }
+}
+
+main h2 {
+  padding: 0;
+  margin: 0;
+  font-size: 1.6em;
   text-align: center;
 }
 
-main article:nth-child(1) {
-  opacity: calc(1 / 7);
+main > *:nth-child(2n) {
+  --cicada-2: 1;
+  font-style: italic;
 }
 
-main article:nth-child(2) {
-  opacity: calc(2 / 7);
+main > *:nth-child(3n) {
+  --cicada-3: 1;
 }
 
-main article:nth-child(3) {
-  opacity: calc(0.3 + 0.7 * calc(3 / 7));
+main > *:nth-child(5n) {
+  --cicada-5: 1;
+  font-family: 'Dorsa', sans-serif;
 }
 
-main article:nth-child(4) {
-  opacity: calc(0.3 + 0.7 * calc(4 / 7));
+main > *:nth-child(7n) {
+  --cicada-7: 1;
+  font-weight: normal;
 }
 
-main article:nth-child(5) {
-  opacity: calc(0.3 + 0.7 * calc(5 / 7));
+main > *:nth-child(11n) {
+  --cicada-11: 1;
 }
 
-main article:nth-child(6) {
-  opacity: calc(0.3 + 0.7 * calc(6 / 7));
+main > *:nth-child(13n) {
+  --cicada-13: 1;
 }
 
-main article:nth-child(7) {
-  opacity: calc(0.3 + 0.7 * calc(7 / 7));
+main > *:nth-child(17n) {
+  --cicada-17: 1;
+}
+
+main > *:nth-child(19n) {
+  --cicada-19: 1;
 }
