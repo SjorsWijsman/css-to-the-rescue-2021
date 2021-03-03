@@ -55,4 +55,8 @@ The result of this and end result of the project looks like the following (also 
 
 https://streamable.com/gpbbnd
 
+I also added a light theme which looks like this:
+
+https://streamable.com/et0r4x
+
 [Commit](https://github.com/SjorsWijsman/css-to-the-rescue-2021/commit/887421fd60b0496934114d1cf1d1807a3717e1ff)
