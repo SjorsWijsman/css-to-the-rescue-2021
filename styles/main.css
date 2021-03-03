@@ -80,14 +80,13 @@ main > * {
   --cicada-17: 0;
   --cicada-19: 0;
 
-  --cicada-max: 8;
   --cicada: calc(var(--cicada-2) + var(--cicada-3) + var(--cicada-5) + var(--cicada-7) + var(--cicada-11) + var(--cicada-13) + var(--cicada-17) + var(--cicada-19));
 
   transform:
-    rotate(calc(calc(var(--cicada) - 2) * 5deg))
-    skewX(calc(calc(var(--cicada) - 2) * 5deg))
-    translateZ(calc(var(--cicada) * 1rem));
-  font-size: calc(var(--cicada) * 0.2rem + 0.6rem);
+    rotate(calc(var(--cicada) * 2deg))
+    skewX(calc(var(--cicada) * 2deg))
+    translateZ(calc(var(--cicada) * 0.4rem));
+  font-size: calc(var(--cicada) * 0.1rem + 0.8rem);
 }
 
 @keyframes animate-glow {
@@ -107,36 +106,39 @@ main h2 {
 }
 
 main > *:nth-child(2n) {
-  --cicada-2: 1;
+  --cicada-2: -1.21;
   font-style: italic;
 }
 
 main > *:nth-child(3n) {
-  --cicada-3: 1;
+  --cicada-3: 3.43;
+  text-align: justify;
 }
 
 main > *:nth-child(5n) {
-  --cicada-5: 1;
+  --cicada-5: 4.23;
   font-family: 'Dorsa', sans-serif;
+  text-align: center;
 }
 
 main > *:nth-child(7n) {
-  --cicada-7: 1;
+  --cicada-7: 6.77;
   font-weight: normal;
 }
 
 main > *:nth-child(11n) {
-  --cicada-11: 1;
+  --cicada-11: -1.50;
 }
 
 main > *:nth-child(13n) {
-  --cicada-13: 1;
+  --cicada-13: 0.47;
+  text-align: right;
 }
 
 main > *:nth-child(17n) {
-  --cicada-17: 1;
+  --cicada-17: 3.44;
 }
 
 main > *:nth-child(19n) {
-  --cicada-19: 1;
+  --cicada-19: -4.28;
 }
