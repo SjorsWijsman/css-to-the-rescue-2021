@@ -34,34 +34,6 @@ img.invert {
   }
 }
 
-/* html {
-  animation-name: flip;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes flip {
-  0% {
-    transform: scaleY(1);
-    filter: none;
-  }
-
-  95% {
-    transform: scaleY(1);
-    filter: none;
-  }
-
-  95.1% {
-    transform: scaleY(-1);
-    filter: contrast(150%);
-  }
-
-  100% {
-    transform: scaleY(-1);
-    filter: contrast(150%);
-  }
-} */
-
 :root {
   background: var(--background-gradient);
   background-repeat: no-repeat;

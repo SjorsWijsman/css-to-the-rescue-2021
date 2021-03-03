@@ -1,0 +1,15 @@
+* input {
+  width: 0px;
+  opacity: 0;
+}
+
+body:focus-within main > * {
+  transform:
+    rotate(calc(var(--cicada) * 2deg))
+    skewX(calc(var(--cicada) * 2deg))
+    translateZ(calc(var(--cicada) * 0.4rem))
+    scaleY(0.05);
+  filter:
+    hue-rotate(calc(var(--cicada) * 80deg))
+    contrast(1.2);
+}
