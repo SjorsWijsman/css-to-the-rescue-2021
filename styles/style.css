@@ -12,6 +12,28 @@ html {
   overflow: scroll;
 }
 
+img.invert {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    --color-black: #d5d8e3;
+    --color-white: #070b12;
+    --color-white-dark: #0c182b;
+    --color-effect: darkred;
+    --color-background: #f0f1f5;
+  }
+
+  img:not(img.invert) {
+    display: none;
+  }
+
+  img.invert {
+    display: inherit;
+  }
+}
+
 /* html {
   animation-name: flip;
   animation-duration: 3s;

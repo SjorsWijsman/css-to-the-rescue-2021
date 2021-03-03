@@ -52,10 +52,6 @@ main > * {
   line-height: 1em;
   text-shadow: 0 0 0.5rem var(--color-effect);
   text-align: justify;
-  animation-name: animate-glow;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
   padding-bottom: 5rem;
   z-index: 1;
 }
@@ -87,15 +83,6 @@ main > * {
     skewX(calc(var(--cicada) * 2deg))
     translateZ(calc(var(--cicada) * 0.4rem));
   font-size: calc(var(--cicada) * 0.1rem + 0.8rem);
-}
-
-@keyframes animate-glow {
-  80% {
-    text-shadow: 0 0 0.5rem var(--color-effect);
-  }
-  100% {
-    text-shadow: 0 0 1rem var(--color-white);
-  }
 }
 
 main h2 {
