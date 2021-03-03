@@ -7,6 +7,10 @@ svg, img {
   z-index: 5;
 }
 
+svg {
+  filter: blur(0.1rem);
+}
+
 img {
   z-index: 4;
   opacity: 1;
@@ -83,6 +87,8 @@ main > * {
     skewX(calc(var(--cicada) * 2deg))
     translateZ(calc(var(--cicada) * 0.4rem));
   font-size: calc(var(--cicada) * 0.1rem + 0.8rem);
+  filter: blur(calc(var(--cicada) * -0.05rem));
+  opacity: calc(1 / var(--cicada) + 0.7);
 }
 
 main h2 {
